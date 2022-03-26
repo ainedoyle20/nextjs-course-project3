@@ -6,6 +6,7 @@ async function handler(req, res) {
 
         if (!userEmail || !userEmail.includes('@')) {
             res.status(422).json({ message: 'Invalid email address' });
+            return;
         }
 
         let client;
